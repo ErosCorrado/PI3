@@ -1,17 +1,36 @@
+import React from 'react';
+import { Link } from 'react-router-dom'
+
 function Navbar (props) {
+
+    let navegacion = [
+        {
+            name: "Home",
+            ruta: "/"
+        }
+    
+    ];
+
     return (
         <div>
-    <nav>
-        <ul classname="main-nav">
-            {
-            props.datos.map((Itemheader, idx)=><li key={idx + Itemheader.name}> {Itemheader.name}</li>)
-            }
-        </ul>
-        <ul class="user">
-            <li>{props.usuario} <img src="./user.jpg" alt=""/></li>
-        </ul>
+      <nav >
+      <ul className='arriba'>
+        <li > 
+          <Link to ={navegacion[0].ruta} >
+            <img src="../../images/netflix.png" alt="" className="logo" />
+          </Link>
+        </li>
+              {
+                navegacion.map((elm) => 
+          <li className="itemlista">
+            <Link className="navlink" to={elm.ruta}>
+              {elm.name}
+            </Link>
+          </li> )
+              }
+      </ul>
     </nav>
-        </div>
+    </div>
     );
 }
 export default Navbar

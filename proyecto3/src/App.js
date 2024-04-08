@@ -1,31 +1,17 @@
 import Navbar from "./componentes/Navbar/Navbar"
-
-let navegacion = [
-	{
-        name: "home",
-        Link: "./"
-    },
-    {
-        name: "Popular",
-        Link:"./"
-    },
-    {
-        name: "Top Rated",
-        Link: "./"
-    },
-
-];
+//import Footer from "./componentes/Footer/Footer"
+import Home from "./screens/Home/Home"
+import {Switch, Route} from "react-router-dom"
 
 function App() {
-  return (
-      <div>
-          <Navbar
-          datos = { navegacion }
-          titulo="Elemento menu"
-          usuario="Nombre del usuario"/>
-      </div>
-      
-      );
-    }
+    return (
+        <>
+            <Navbar />
+            <Switch>
+                <Route path={'/'} exact={true} component={Home} />
+            </Switch>
+        </>
+    );
+} 
     
 export default App;
