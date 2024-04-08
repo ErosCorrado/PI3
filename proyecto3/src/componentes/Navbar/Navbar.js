@@ -8,7 +8,7 @@ function Navbar (props) {
             name: "Home",
             ruta: "/"
         }
-    
+      
     ];
 
     return (
