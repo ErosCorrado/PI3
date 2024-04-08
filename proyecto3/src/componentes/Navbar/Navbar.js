@@ -7,7 +7,15 @@ function Navbar (props) {
         {
             name: "Home",
             ruta: "/"
-        }
+        },
+        {
+          name: "Populares",
+          ruta: "/Populares"
+        },
+        {
+          name: "Mejor Rankeadas",
+          ruta: "/TopRanked"
+        },
       
     ];
 
