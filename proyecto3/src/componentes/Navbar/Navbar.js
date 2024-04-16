@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css'; // Importa el archivo CSS de estilos
+import empresaLogo from '../../images/netflix.png'; // Importa la imagen de la empresa
+
 
 function Navbar(props) {
     let navegacion = [
@@ -23,7 +26,7 @@ function Navbar(props) {
                 <ul className='arriba'>
                     <li>
                         <Link to={navegacion[0].ruta}>
-                            <img src="../../images/netflix.png" alt="" className="logo" />
+                        <img src={empresaLogo} alt="Logo de Netflix" className="logo" />
                         </Link>
                     </li>
                     {navegacion.map((elm, index) => (

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card';
 import { options } from '../../Key/Key';
+import './Container.css'; 
 
 class Container extends Component {
 
@@ -16,14 +17,11 @@ class Container extends Component {
         .then((resp)=> resp.json())
         .then((data)=> this.setState({popular: data.results.slice(0, 5)}))
         .catch((err) => console.log(err))
-        
     }
 
     render(){
         return (
-            <div>
-                {console.log(this.state.popular)}
-                {console.log('holaa')}
+            <div className="section"> 
                 {this.state.popular.length > 0 ? (
                     this.state.popular.map((elm, idx) => (
                         <Card 
@@ -39,7 +37,6 @@ class Container extends Component {
             </div>
         );
     }
-
 }
 
 export default Container;

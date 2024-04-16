@@ -1,0 +1,65 @@
+/* Estilos para el Navbar */
+/* Estilos para el Navbar */
+nav {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #dee2e6; /* Borde */
+    border-radius: 15px; /* Redondea las esquinas */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15); /* Sombra */
+    padding: 15px; /* Ajusta el padding interno */
+    margin-bottom: 20px; /* Espacio inferior */
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
+}
+
+
+.arriba {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina el margen de la lista */
+    padding: 0; /* Elimina el padding de la lista */
+    display: flex; /* Utiliza Flexbox para alinear elementos en la lista */
+    justify-content: space-between; /* Distribuye los elementos de manera uniforme */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.logo {
+    max-width: 50px; /* Ancho máximo del logo */
+    height: auto; /* Mantiene la proporción */
+}
+
+.itemlista {
+    margin-left: 10px; /* Espacio entre elementos de la lista */
+    font-size: 19px; /* Tamaño del texto de las opciones */
+}
+
+.navlink {
+    color: #333; /* Color de texto */
+    text-decoration: none; /* Quita la decoración de texto */
+    margin: 0 10px; /* Espacio entre enlaces */
+    padding: 5px 10px; /* Espaciado interno de enlaces */
+    border-radius: 15px; /* Redondea las esquinas de los enlaces */
+    transition: background-color 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.navlink:hover {
+    background-color: #dee2e6; /* Cambia el color de fondo al hacer hover */
+}
+
+/* Estilos para el componente Home */
+.home-container {
+    padding: 20px; /* Espaciado interno */
+    background-color: #f5f5f5; /* Fondo gris claro */
+}
+
+.home-title {
+    font-size: 2.5rem; /* Tamaño del título principal */
+    color: #000; /* Color de texto negro */
+    margin-bottom: 10px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
+}
+
+.home-subtitle {
+    font-size: 1.8rem; /* Tamaño del subtítulo */
+    color: #000; /* Color de texto negro */
+    margin-bottom: 20px; /* Espacio inferior */
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
+}
