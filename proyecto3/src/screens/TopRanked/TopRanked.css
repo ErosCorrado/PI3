@@ -1,0 +1,12 @@
+/* Estilos para la página de "Mejor rankeadas" */
+.top-ranked-container {
+    padding: 20px; /* Espaciado interno */
+}
+
+.top-ranked-title {
+    font-size: 2.5rem; /* Tamaño del título principal */
+    color: #333; /* Color de texto más oscuro */
+    margin-bottom: 20px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
+}

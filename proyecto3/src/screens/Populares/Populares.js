@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import { options } from '../../Key/Key'
+import { options } from '../../Key/Key';
+import Container from '../../componentes/Container/Container';
+import './Populares.css'; // Importa el archivo CSS de estilos
 
 class Populares extends Component {
-    constructor(props){
-        super(props)}
-    
+    constructor(props) {
+        super(props);
+    }
 
-
-    
     render() {
-
-
         return (
-            <div>
-                <h1>Populares</h1>
+            <div className="populares-container">
+                <h1 className="populares-title">Populares</h1>
+                <Container />
             </div>
         );
     }
