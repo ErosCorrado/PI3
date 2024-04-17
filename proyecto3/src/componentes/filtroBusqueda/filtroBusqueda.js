@@ -1,5 +1,4 @@
 import { Component } from "react";
-import './styles.css'
 
 class filtroBusqueda extends Component {
     constructor(props){

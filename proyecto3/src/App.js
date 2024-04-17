@@ -4,6 +4,9 @@ import Home from "./screens/Home/Home"
 import {Switch, Route} from "react-router-dom"
 import Populares from "./screens/Populares/Populares.js"
 import TopRanked from "./screens/TopRanked/TopRanked.js";
+import NotFound from './screens/NotFound/NotFound.js'
+import SearchResult from './screens/SearchResult/SearchResult.js'
+
 
 function App() {
     return (
@@ -13,8 +16,8 @@ function App() {
                 <Route path={'/'} exact={true} component={Home} />
                 <Route path={'/Populares'}  component={Populares} />
                 <Route path={'/TopRanked'}  component={TopRanked} />
-
-
+                <Route path='/searchResult/:searchResult' component={SearchResult} />
+                <Route component={NotFound} />
             </Switch>
         </>
     );
