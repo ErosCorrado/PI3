@@ -13,7 +13,7 @@ class ContainerRanked extends Component {
     componentDidMount() {
         fetch('https://api.themoviedb.org/3/movie/upcoming', options)
             .then((resp) => resp.json())
-            .then((data) => this.setState({ ranked: data.results.slice(0, 5) }))
+            .then((data) => this.setState({ ranked: data.results.slice(0,5)}))
             .catch((err) => console.log(err));
     }
 
@@ -29,9 +29,11 @@ class ContainerRanked extends Component {
                             key={idx + elm.name}
                         />
                     ))
+                    
                 ) : (
                     <h2>Cargando..</h2>
                 )}
+
             </div>
         );
     }

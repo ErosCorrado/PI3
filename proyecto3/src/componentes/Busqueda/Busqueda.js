@@ -1,5 +1,5 @@
+import React from "react";
 import { Component } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 class Busqueda extends Component {
     constructor(props){
@@ -10,15 +10,15 @@ class Busqueda extends Component {
     }
 
     evitarSubmit(event){
-        event.preventDefault()
+        event.preventDefault();
+        this.props.history.push('/resultadosBusqueda/'+ this.state.valorInput)
     }
 
     guardarValor(event){
         this.setState({
             valorInput: event.target.value
-        },
-        ()=> this.props.filtrarPeliculas(this.state.valorInput))
-    }
+        })}
+
 
     render(){
         return(
@@ -26,11 +26,14 @@ class Busqueda extends Component {
                 onSubmit={(event)=> this.evitarSubmit(event)}
             >
                 <input
+                type="text"
+                name="busqueda"
                 onChange={(event)=> this.guardarValor(event)}
-                placeholder="Busca una pelicula" />
-                <Link to={`/resultadosBusqueda/${this.state.valorInput}`}>
-                    <button type="submit">Buscar</button>
-                </Link>
+                placeholder="Busca una pelicula"
+                value = {this.state.valorInput}
+                />
+                <button type="submit">Buscar</button>
+            
             </form>
         )
     }

@@ -16,7 +16,7 @@ function App() {
                 <Route path={'/'} exact={true} component={Home} />
                 <Route path={'/Populares'}  component={Populares} />
                 <Route path={'/TopRanked'}  component={TopRanked} />
-                <Route path='/searchResult/:searchResult' component={SearchResult} />
+                <Route path='/resultadosBusqueda/:resultadosBusqueda' component={SearchResult} />
                 <Route component={NotFound} />
             </Switch>
         </>

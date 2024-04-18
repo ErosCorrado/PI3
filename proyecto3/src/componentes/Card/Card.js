@@ -53,6 +53,7 @@ class Card extends Component { // Cambia el nombre de la clase a Card
                 </div>
             </div>
         );
+
     }
 }
 
