@@ -8,7 +8,7 @@ class Container extends Component {
     constructor(props){
         super(props)
         this.state = {
-            popular:[],
+            movieData:[],
             pag:1
         }
     }
@@ -16,7 +16,7 @@ class Container extends Component {
     componentDidMount(){
         fetch('https://api.themoviedb.org/3/movie/popular', options)
         .then((resp)=> resp.json())
-        .then((data)=> this.setState({popular: data.results}))
+        .then((data)=> this.setState({movieData: data.results}))
         .catch((err) => console.log(err))
     }
 
@@ -24,7 +24,7 @@ class Container extends Component {
         fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=7384aa0b23ce68ba408f9921ee711e62&page=${(this.state.pag + 1)}`)
         .then(resp => resp.json())
         .then(data => this.setState({
-            popular : this.state.popular.concat(data.results),
+            movieData : this.state.movieData.concat(data.results),
             pag: this.state.pag + 1
         }))
         .catch(err => console.log(err))
@@ -33,9 +33,11 @@ class Container extends Component {
     render(){
         return (
             <div className="section"> 
-                {this.state.popular.length > 0 ? (
-                    this.state.popular.map((elm, idx) => (
+                {this.state.movieData.length > 0 ? (
+                    this.state.movieData.map((elm, idx) => (
                         <Card 
+                            refreshState={this.props.refreshState ? (id) => this.props.refreshState(id) : false} 
+                            id={elm.id}
                             image={`https://image.tmdb.org/t/p/w500${elm.poster_path}`}
                             title={elm.title}
                             description={elm.overview}

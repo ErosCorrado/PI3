@@ -17,6 +17,10 @@ function Navbar(props) {
         {
             name: "Mejor Rankeadas",
             ruta: "/TopRanked"
+        },
+        {
+            name: "Favourites",
+            ruta: "/Favourites"
         }
     ];
 
