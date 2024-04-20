@@ -48,8 +48,9 @@ class Container extends Component {
                 ) : (
                     <h2>Cargando..</h2>
                 )}  
-            <button onClick={()=>this.masPeliculas()}>CARGAR MAS PELICULAS</button>
-  
+                {this.state.movieData.length >= 10 && (
+                    <button onClick={()=>this.masPeliculas()}>CARGAR MAS PELICULAS</button>
+                )}
             </div>
             
         );

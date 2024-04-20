@@ -21,6 +21,7 @@ class Busqueda extends Component {
 
 
     render(){
+        console.log(this.props.history)
         return(
             <form
                 onSubmit={(event)=> this.evitarSubmit(event)}

@@ -82,6 +82,8 @@ class Card extends Component { // Cambia el nombre de la clase a Card
       }
 
     render(){
+      console.log(this.props.peliculas);
+        const { peliculas } = this.props;
         return  (
             <div className="card">
                 <div className="card-content">

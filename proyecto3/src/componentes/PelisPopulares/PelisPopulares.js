@@ -37,7 +37,7 @@ class PelisPopulares extends Component {
                 ) : (
                     <h2>Cargando..</h2>
                 )}    
-                <button><Link to="/Populares">VER TODAS LAS PELICULAS</Link></button>
+                <button><Link to="/Populares" class='boton'>VER TODAS LAS PELICULAS POPULARES</Link></button>
 
             </div>
             

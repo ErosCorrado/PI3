@@ -11,7 +11,7 @@ class ResultadoBusqueda extends Component {
     }
 
     componentDidMount() {
-         fetch(`https://api.themoviedb.org/3/search/movie?query=${this.props.match.params.search}&api_key=0ac8f3235ecd7f1b9c2f99fa8b233126`)
+         fetch(`https://api.themoviedb.org/3/search/movie?query=${this.props.match.params.resultadosBusqueda}&api_key=0ac8f3235ecd7f1b9c2f99fa8b233126`)
              .then(response => response.json())
              .then(data => {
                 console.log(data.results)
@@ -24,20 +24,21 @@ class ResultadoBusqueda extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Resultados de Búsqueda</h1>
-                {this.state.peliculas.map((elm, idx) => (
-                <Card
-                 key={idx + elm.title}
-                actualizarFav={(arr) => this.favoritos(arr)}
-                esFav={this.state.favoritos.includes(elm.id)}
-                peliculas={elm}
+          this.state.peliculas.length !== 0 ?
+            <section>
+              <h2>Resultados para: {this.props.match.params.resultadosBusqueda}</h2> 
+              {
+              this.state.peliculas.map((elm, idx) => (
+                  <Card
+                      key={idx + elm.title}
+                      peliculas={elm}
                   />
-                ))
-            }
-            </div>
-      )
+              ))
+          }
+            </section>
+            :
+            <h2>No se encontraron resultados para: {this.props.match.params.resultadosBusqueda}</h2>
+        )
+      }
     }
-      
-  }    
 export default ResultadoBusqueda;
