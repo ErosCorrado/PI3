@@ -10,8 +10,8 @@ class Card extends Component {
           isSelected: false,
           hiddenContent: true,
           textBtn: 'Ver más',
-          isFav: false
-          
+          isFav: false,
+          ultimoCommit: 'ultimo commit'
         }
     }
 

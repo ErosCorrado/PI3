@@ -10,7 +10,7 @@ export default class Detalle extends Component {
             isFav: false
         }
     }
-
+// nuevo commit
   componentDidMount(){
       fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}`, options)
       .then(res => res.json())
