@@ -10,23 +10,25 @@ class PelisPopulares extends Component {
     constructor(props){
         super(props)
         this.state = {
-            popular:[],
+            movies:[],
         }
     }
 
     componentDidMount(){
         fetch('https://api.themoviedb.org/3/movie/popular', options)
         .then((resp)=> resp.json())
-        .then((data)=> this.setState({popular: data.results.slice(0,5)}))
+        .then((data)=> this.setState({movies: data.results.slice(0,5)}))
         .catch((err) => console.log(err))
     }
 
     render(){
         return (
             <div className="section"> 
-                {this.state.popular.length > 0 ? (
-                    this.state.popular.map((elm, idx) => (
+                {this.state.movies.length > 0 ? (
+                    this.state.movies.map((elm, idx) => (
                         <Card 
+                            refreshState={this.props.refreshState ? (id) => this.props.refreshState(id) : false} 
+                            id={elm.id}
                             image={`https://image.tmdb.org/t/p/w500${elm.poster_path}`}
                             title={elm.title}
                             description={elm.overview}

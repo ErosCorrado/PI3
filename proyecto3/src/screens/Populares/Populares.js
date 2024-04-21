@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { options } from '../../Key/Key';
 import PelisPopulares from '../../componentes/Container/Container';
-import './Populares.css'; // Importa el archivo CSS de estilos
+import './Populares.css';
 
 class Populares extends Component {
     constructor(props) {

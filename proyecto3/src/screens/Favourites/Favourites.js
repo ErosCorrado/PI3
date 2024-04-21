@@ -13,28 +13,25 @@ class Favourites extends Component {
   componentDidMount() {
     let storageMovies = localStorage.getItem("favourites");
     if (storageMovies !== null) {
-      let favouritesMovies = JSON.parse(storageMovies);
-      Promise.all(
-        favouritesMovies.map((id) =>
-          fetch("https://api.themoviedb.org/3/movie/" + id, options).then(
-            (resp) => resp.json()
-          )
+        let favouritesMovies = JSON.parse(storageMovies);
+        Promise.all(
+            favouritesMovies.map((id) =>
+                fetch("https://api.themoviedb.org/3/movie/" + id, options).then(
+                    (resp) => resp.json()
+                )
+            )
         )
-      )
-        .then((data) =>{
-          data.length > 0 ?
-          this.setState({ favourites: data,
-            haveFav: true
-           }
-          )
-          :
-          this.setState({ haveFav: false }
-          )
-          }
-        )
+        .then((data) => {
+            // Filtramos las películas que tienen éxito en la respuesta de la API
+            const validMovies = data.filter(movie => movie.success !== false);
+            validMovies.length > 0 ?
+            this.setState({ favourites: validMovies, haveFav: true })
+            :
+            this.setState({ haveFav: false })
+        })
         .catch((err) => console.log(err));
     }
-  }
+}
 
   refreshState(id) {
     let refState = this.state.favourites.filter((elm) => elm.id !== id);

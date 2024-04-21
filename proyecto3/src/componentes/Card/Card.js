@@ -7,7 +7,7 @@ class Card extends Component { // Cambia el nombre de la clase a Card
         this.state= {
           isSelected: false,
           hiddenContent: true,
-          textBtn: 'Ver menos',
+          textBtn: 'Ver más',
           isFav: false
         }
     }

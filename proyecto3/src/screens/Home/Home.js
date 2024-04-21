@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Home.css'; // Importa el archivo CSS de estilos
+import './Home.css'; 
 import ContainerRanked from '../../componentes/ContainerRanked/ContainerRanked';
 import Busqueda from '../../componentes/Busqueda/Busqueda'
 import PelisPopulares from '../../componentes/PelisPopulares/PelisPopulares';
