@@ -1,8 +1,9 @@
-import React, { Component } from 'react'; // Importa Component de React
+import React, { Component } from 'react';
 import './Card.css'; 
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-class Card extends Component { // Cambia el nombre de la clase a Card
+class Card extends Component {
     constructor(props){
         super(props);
         this.state= {
@@ -10,6 +11,7 @@ class Card extends Component { // Cambia el nombre de la clase a Card
           hiddenContent: true,
           textBtn: 'Ver más',
           isFav: false
+          
         }
     }
 
@@ -119,4 +121,4 @@ class Card extends Component { // Cambia el nombre de la clase a Card
     }
 }
 
-export default Card;
+export default withRouter(Card);

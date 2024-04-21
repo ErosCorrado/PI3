@@ -7,7 +7,7 @@ import TopRanked from "./screens/TopRanked/TopRanked.js";
 import NotFound from './screens/NotFound/NotFound.js'
 import SearchResult from './screens/SearchResult/SearchResult.js'
 import Favourites from './screens/Favourites/Favourites.js'
-import Movie from './componentes/Movie/Movie.js'
+import Detalle from './screens/Detalle/Detalle.js'
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
                 <Route path={'/Populares'}  component={Populares} />
                 <Route path={'/TopRanked'}  component={TopRanked} />
                 <Route path={'/Favourites'} component={Favourites} />
-                <Route path={'/movie/id/:id'} component={Movie}/>
+                <Route path={'/movie/id/:id'} component={Detalle}/>
                 <Route path='/resultadosBusqueda/:resultadosBusqueda' component={SearchResult} />
                 <Route component={NotFound} />
             </Switch>
