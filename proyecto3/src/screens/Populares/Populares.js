@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PelisPopulares from '../../componentes/Container/Container';
+import PelisPopulares from '../../componentes/PelisPopulares/PelisPopulares';
 import './Populares.css';
 
 class Populares extends Component {
