@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { options } from '../../Key/Key'
 import { Link } from "react-router-dom"
+import "./Detalle.css"
 
 export default class Detalle extends Component {
     constructor(props){
@@ -65,7 +66,9 @@ export default class Detalle extends Component {
   render() {
     return (
       <>
-      {
+      {this.state.movie.length === 0 ? (
+        <h2>Cargando...</h2>
+      ):(
            <section>
             <article className='character-card'>
               <Link to={`/movie/id/${this.state.movie.id}`}><img src= { 'https://image.tmdb.org/t/p/w500/'+this.state.movie.poster_path} alt={this.state.movie.title} className='image'/></Link>
@@ -85,8 +88,7 @@ export default class Detalle extends Component {
               }
               </article>
           </section>
-          
-        }
+          )}
       </>
     )
   }

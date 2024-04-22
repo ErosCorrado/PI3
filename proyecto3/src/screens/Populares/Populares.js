@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Container from '../../componentes/Container/Container';
+import Container from '../../componentes/ContainerPopulares/ContainerPopulares';
 import './Populares.css';
 
 class Populares extends Component {

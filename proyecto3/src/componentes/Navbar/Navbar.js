@@ -15,8 +15,8 @@ function Navbar(props) {
             ruta: "/Populares"
         },
         {
-            name: "Mejor Rankeadas",
-            ruta: "/TopRanked"
+            name: "Upcoming",
+            ruta: "/Upcoming"
         },
         {
             name: "Favourites",

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { options } from "../../Key/Key";
-import Container from "../../componentes/Container/Container";
+import Container from "../../componentes/ContainerPopulares/ContainerPopulares";
 
 class Favourites extends Component {
   constructor(props) {

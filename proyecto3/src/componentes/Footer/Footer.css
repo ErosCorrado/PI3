@@ -1,0 +1,14 @@
+.Footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+  }
+  
+  .ElemFooter {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 18px;
+  }

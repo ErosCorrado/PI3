@@ -38,7 +38,7 @@ class ContainerRanked extends Component {
                 ) : (
                     <h2>Cargando..</h2>
                 )}    
-                <button><Link to="/TopRanked" class='boton'>VER TODAS LAS PELICULAS MEJOR RANKEADAS</Link></button>
+                <button><Link to="/Upcoming" class='boton'>VER TODAS LAS PELICULAS UPCOMING</Link></button>
 
             </div>
             

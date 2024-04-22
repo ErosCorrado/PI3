@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../../componentes/Card/Card'
+import "./SearchResults.css"
 
 class ResultadoBusqueda extends Component {
     constructor(props) {

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './Home.css'; 
-import ContainerRanked from '../../componentes/ContainerRanked/ContainerRanked';
+import PelisUpcoming from '../../componentes/PelisUpcoming/PelisUpcoming';
 import Busqueda from '../../componentes/Busqueda/Busqueda'
 import PelisPopulares from '../../componentes/PelisPopulares/PelisPopulares';
-import Container from '../../componentes/Container/Container'
 
 class Home extends Component {
     constructor(props) {
@@ -20,9 +19,8 @@ class Home extends Component {
                 />
                 <h1 className="home-title">Películas Populares</h1>
                 <PelisPopulares />
-                <h1 className="home-title">Películas Mejor Rankeadas</h1>
-                <ContainerRanked />
-
+                <h1 className="home-title">Películas Upcoming</h1>
+                <PelisUpcoming />
             </div>
         );
     }}
