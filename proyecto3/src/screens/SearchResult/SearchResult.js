@@ -30,8 +30,12 @@ class ResultadoBusqueda extends Component {
               {
               this.state.peliculas.map((elm, idx) => (
                   <Card
-                      key={idx + elm.title}
-                      peliculas={elm}
+                  refreshState={this.props.refreshState ? (id) => this.props.refreshState(id) : false} 
+                  id={elm.id}
+                  image={`https://image.tmdb.org/t/p/w500${elm.poster_path}`}
+                  title={elm.title}
+                  description={elm.overview}
+                  key={idx + elm.name} 
                   />
               ))
           }

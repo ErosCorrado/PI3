@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PelisPopulares from '../../componentes/PelisPopulares/PelisPopulares';
+import Container from '../../componentes/Container/Container';
 import './Populares.css';
 
 class Populares extends Component {
@@ -11,7 +11,7 @@ class Populares extends Component {
         return (
             <div className="populares-container">
                 <h1 className="populares-title">Populares</h1>
-                <PelisPopulares />
+                <Container />
             </div>
         );
     }

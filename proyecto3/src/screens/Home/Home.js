@@ -3,6 +3,7 @@ import './Home.css';
 import ContainerRanked from '../../componentes/ContainerRanked/ContainerRanked';
 import Busqueda from '../../componentes/Busqueda/Busqueda'
 import PelisPopulares from '../../componentes/PelisPopulares/PelisPopulares';
+import Container from '../../componentes/Container/Container'
 
 class Home extends Component {
     constructor(props) {

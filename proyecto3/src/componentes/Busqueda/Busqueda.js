@@ -23,6 +23,7 @@ class Busqueda extends Component {
     render(){
         console.log(this.props.history)
         return(
+            <div className="search"> 
             <form
                 onSubmit={(event)=> this.evitarSubmit(event)}
             >
@@ -34,8 +35,8 @@ class Busqueda extends Component {
                 value = {this.state.valorInput}
                 />
                 <button type="submit">Buscar</button>
-            
             </form>
+            </div>
         )
     }
 }
