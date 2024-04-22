@@ -15,11 +15,11 @@ function Navbar(props) {
             ruta: "/Populares"
         },
         {
-            name: "Upcoming",
+            name: "Próximamente",
             ruta: "/Upcoming"
         },
         {
-            name: "Favourites",
+            name: "Tus Favoritas",
             ruta: "/Favourites"
         }
     ];

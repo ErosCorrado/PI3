@@ -21,6 +21,15 @@
     justify-content: flex-start; /* Alinea las tarjetas al inicio del contenedor */
     gap: 20px; /* Espacio entre las tarjetas */
   }
+
+  .letter {
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 2rem; /* Tamaño del título */
+    color: #333; /* Color de texto */
+    font-weight: bold; /* Negrita */
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
+
+  }
   
   /* Estilos para pantallas pequeñas */
   @media (max-width: 390px) {

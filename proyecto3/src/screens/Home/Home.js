@@ -19,7 +19,7 @@ class Home extends Component {
                 />
                 <h1 className="home-title">Películas Populares</h1>
                 <PelisPopulares />
-                <h1 className="home-title">Películas Upcoming</h1>
+                <h1 className="home-title">Próximamente </h1>
                 <PelisUpcoming />
             </div>
         );
