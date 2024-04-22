@@ -1,35 +1,35 @@
-/* .section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+/* Estilos para el componente ResultadoBusqueda */
+.search-results-container {
+  padding: 20px; /* Espaciado interno */
+  background-color: #f5f5f5; /* Fondo gris claro */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  margin: 20px; /* Margen externo */
+}
+
+.search-results-title {
+  margin-bottom: 20px; /* Espacio debajo del título */
+  font-size: 2rem; /* Tamaño del título */
+  color: #333; /* Color de texto */
+  font-weight: bold; /* Negrita */
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Alinea las tarjetas al inicio del contenedor */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 390px) {
+  .search-results-title {
+    font-size: 1.2rem; /* Reducción del tamaño del título */
   }
-  
-  .card {
-    width: 250px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+
+  .cards-container {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    align-items: center; /* Centra las tarjetas */
   }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px 8px 0 0;
-  }
-  
-  .card-content {
-    padding: 16px;
-  }
-  
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 8px;
-  }
-  
-  .card-description {
-    font-size: 14px;
-    color: #666;
-  } */
+}

@@ -10,3 +10,14 @@
     font-weight: bold; /* Negrita */
     font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
 }
+/* Estilos para pantallas pequeñas */
+@media (max-width: 390px) {
+    .top-ranked-container {
+      padding: 15px; /* Ajusta el espaciado interno en pantallas pequeñas */
+    }
+  
+    .top-ranked-title {
+      font-size: 2rem; /* Reducción del tamaño del título en pantallas pequeñas */
+    }
+  }
+  

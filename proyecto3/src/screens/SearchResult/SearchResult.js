@@ -26,21 +26,21 @@ class ResultadoBusqueda extends Component {
     render() {
         return (
           this.state.peliculas.length !== 0 ?
-            <section>
-              <h2>Resultados para: {this.props.match.params.resultadosBusqueda}</h2> 
-              {
-              this.state.peliculas.map((elm, idx) => (
-                  <Card
-                  refreshState={this.props.refreshState ? (id) => this.props.refreshState(id) : false} 
-                  id={elm.id}
-                  image={`https://image.tmdb.org/t/p/w500${elm.poster_path}`}
-                  title={elm.title}
-                  description={elm.overview}
-                  key={idx + elm.name} 
-                  />
-              ))
-          }
-            </section>
+            <div className="search-results-container">
+              <h2 className="search-results-title">Resultados para: {this.props.match.params.resultadosBusqueda}</h2>
+              <div className="cards-container">
+                {this.state.peliculas.map((elm, idx) => (
+                    <Card
+                    refreshState={this.props.refreshState ? (id) => this.props.refreshState(id) : false} 
+                    id={elm.id}
+                    image={`https://image.tmdb.org/t/p/w500${elm.poster_path}`}
+                    title={elm.title}
+                    description={elm.overview}
+                    key={idx + elm.name} 
+                    />
+                ))}
+              </div>
+            </div>
             :
             <h2>No se encontraron resultados para: {this.props.match.params.resultadosBusqueda}</h2>
         )

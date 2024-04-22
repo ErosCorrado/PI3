@@ -63,3 +63,16 @@ nav {
     margin-bottom: 20px; /* Espacio inferior */
     font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
 }
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .arriba {
+      flex-direction: column; /* Cambia la dirección del flexbox a columna en pantallas pequeñas */
+      align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+  
+    .itemlista {
+      margin: 10px 0; /* Espacio entre elementos de la lista en pantallas pequeñas */
+    }
+  }
+  

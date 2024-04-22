@@ -1,23 +1,44 @@
+/* Definir variables CSS para colores y fuentes */
+:root {
+    --background-color: #f5f5f5;
+    --text-color: #000;
+    --primary-font: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
 /* Estilos para el componente Home */
-    .home-container {
-        padding: 15px; /* Espaciado interno */
-        background-color: #f5f5f5; /* Fondo gris claro */
-        border-radius: 15px; /* Redondea las esquinas */
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-        margin-bottom: 20px; /* Espacio inferior */
-    }
+.home-container {
+    padding: 15px; /* Espaciado interno */
+    background-color: var(--background-color); /* Uso de variable para el fondo */
+    border-radius: 15px; /* Redondea las esquinas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo base para títulos y subtítulos */
+.home-title, .home-subtitle {
+    color: var(--text-color); /* Uso de variable para el color de texto */
+    font-family: var(--primary-font); /* Uso de variable para la familia de fuentes */
+    margin-bottom: 20px; /* Espacio inferior */
+}
 
 .home-title {
     font-size: 2.5rem; /* Tamaño del título principal */
-    color: #000; /* Color de texto negro */
-    margin-bottom: 10px; /* Espacio inferior */
     font-weight: bold; /* Negrita */
-    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
+    margin-bottom: 10px; /* Menor espacio inferior específico para título */
 }
 
 .home-subtitle {
     font-size: 1.8rem; /* Tamaño del subtítulo */
-    color: #000; /* Color de texto negro */
-    margin-bottom: 20px; /* Espacio inferior */
-    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
 }
+
+
+@media (max-width: 390px) {
+    .home-title {
+      font-size: 2rem; /* Reducción del tamaño del título en pantallas pequeñas */
+    }
+  
+    .home-subtitle {
+      font-size: 1.5rem; /* Reducción del tamaño del subtítulo en pantallas pequeñas */
+    }
+  }
+  

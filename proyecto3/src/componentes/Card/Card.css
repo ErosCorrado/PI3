@@ -1,18 +1,18 @@
 /* Estilos para las tarjetas */
 .card {
-    background-color: #f5f5f6; /* Cambia el color de fondo */
-    border: 1px solid #dee2e6; /* Añade un borde */
-    border-radius: 15px; /* Redondea las esquinas */
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15); /* Agrega sombra */
+    background-color: #f5f5f6;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
     padding: 20px;
     width: 200px;
     text-align: center;
-    transition: box-shadow 0.3s ease; /* Transición suave al hacer hover */
-    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; /* Fuente */
+    transition: box-shadow 0.3s ease;
+    font-family: 'Netflix Sans', 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Ubuntu', 'sans-serif';
 }
 
 .card img {
-    border-radius: 35%; /* Hace que la imagen sea circular */
+    border-radius: 35%;
     max-width: 100%;
     height: auto;
     margin-bottom: 15px;
@@ -20,43 +20,21 @@
 
 .card h2 {
     margin: 10px 0;
-    font-size: 2rem; /* Aumenta el tamaño del título */
-    color: #333; /* Color de texto más oscuro */
+    font-size: 2rem;
+    color: #333;
 }
 
 .card p {
     margin: 5px 0;
-    color: #555; /* Color de texto más claro */
+    color: #555;
 }
 
-.more {
-    color: blue;
-    text-align: right;
-    margin-top: 10px;
+.card a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto del elemento padre */
 }
 
-.delete {
-    color: red;
-    text-align: right;
-    margin-top: 10px;
-}
-
-.more:hover,
-.delete:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.show {
-    display: block;
-}
-
-.hide {
-    display: none;
-}
-
-/* Efecto de sombra más pronunciado al pasar el mouse */
-.card:hover,
-.active {
-    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3); /* Sombra más grande y pronunciada al hacer hover */
+/* Efecto de sombra más pronunciado al pasar el mouse sobre la tarjeta */
+.card:hover {
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
 }
