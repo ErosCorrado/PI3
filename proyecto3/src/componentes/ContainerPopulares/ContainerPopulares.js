@@ -9,7 +9,7 @@ class ContainerPopulares extends Component {
         movies:[],
         pelisFiltradas: [],
         busqueda:'',
-        page:0
+        page:1
     }
 }
 
